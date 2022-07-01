@@ -1,22 +1,20 @@
 #include <stdio.h>
 /**
  * main - main block
- * Description: Write a program that prints the alphabet in lowercase, followed by a new line.
+ * Description: Print the alphabet on a line omitting e and q
+ * using putchar only twice
  * Return: 0
  */
 int main(void)
 {
-	char c = 'a';
-
-	while (c <= 'z')
-	{
-		if (c != 'e' && c != 'q')
-		{
-			putchar(c);
-		}
-		c++;
-	}
-
-	putchar('\n');
-	return (0);
+char alpha = 'a';
+while (alpha <= 'z')
+{
+putchar(alpha);
+alpha++;
+if (alpha == 'e' || alpha == 'q')
+alpha++;
+}
+putchar('\n');
+return (0);
 }
