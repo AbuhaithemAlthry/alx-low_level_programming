@@ -1,46 +1,38 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * main - main block
+ * main - Prints multiple combinations
  * Description: Write a program that prints all possible
- * different combinations of two digits
  * Return: 0
  */
 int main(void)
 {
-int c;
-int d;
-int e;
-int f = 0;
+	int a, b, c, d;
 
-while (f < 10)
-{
-	e = 0;
-	while (e < 10)
+	for (a = '0'; a <= '9'; a++)
 	{
-		d = 0;
-		while (d < 10)
+		for (b = '0'; b <= '9'; b++)
 		{
-			if (!(f == c && e == d))
+			for (c = '0'; c <= '9'; c++)
 			{
-				putchar('0' + f);
-				putchar('0' + e);
-				putchar(' ');
-				putchar('0' + d);
-				putchar('0' + c);
-				if (!(f + e == 18 && c + d == 17 && d == 9))
+				for (d = '0'; d <= '9'; d++)
 				{
-					putchar(',');
-					putchar(' ');
+					if ((a < c) || (a == c && b < d))
+					{
+						putchar(a);
+						putchar(b);
+						putchar(' ');
+						putchar(c);
+						putchar(d);
+					if (!(a == '9' && b == '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+					}
 				}
 			}
-			
-		d++;
 		}
-		e++;
 	}
-	f++;
-}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
