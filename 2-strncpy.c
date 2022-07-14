@@ -1,0 +1,1 @@
+trncpy.c
