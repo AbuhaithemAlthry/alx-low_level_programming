@@ -1,1 +1,1 @@
-my0x07. C - Even more pointers, arrays and strings projects
+**7. C - Even more pointers, arrays and strings**

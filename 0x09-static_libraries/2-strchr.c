@@ -1,31 +1,23 @@
-#include "main.h"
-#include <stdio.h>
+#include "holberton.h"
+
 /**
- * _strchr - locates a character in a string .
- * @s: string to check
- * @c: character to found
- * UPDATE V1.0 : Features : Pointers implementation instead of Arrays .
- * Pointer/memory incrementation instead of i .
- * Return: pointer to s or null
+ * _strchr - Locates a character in a string.
+ * @s: The string to be searched.
+ * @c: The character to be located.
+ *
+ * Return: If c is found - a pointer to the first occurence.
+ * If c is not found - NULL.
  */
 
 char *_strchr(char *s, char c)
 {
+	int index;
 
-	while (*s)
+	for (index = 0; s[index] >= '\0'; index++)
 	{
-		s++;
-
-			if (*s == c)
-		{
-			return (s);
-		}
-
-
+		if (s[index] == c)
+			return (s + index);
 	}
 
-		return (0);
-
-
+	return ('\0');
 }
-

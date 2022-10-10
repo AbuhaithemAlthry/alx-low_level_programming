@@ -1,43 +1,24 @@
 #include <stdio.h>
-
+#include <unistd.h>
 /**
- *
- *  * main - main block
- *
- *   * Description: Write a program that prints the alphabet in lowercase, followed by a new line.
- *
- *    * Return: 0
- *
- *     */
-
+ * main - Entry point
+ * Description: prints lowercase alphabets
+ * Return: Always 0 (success)
+ */
 int main(void)
-
 {
+	int ch;
 
-		char c = 'a';
-
-
-
-			while (c <= 'z')
-
-					{
-
-								if (c != 'e' && c != 'q')
-
-											{
-
-															putchar(c);
-
-																	}
-
-										c++;
-
-											}
-
-
-
-				putchar('\n');
-
-					return (0);
-
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		if (ch != 'e' && ch != 'q')
+		{
+			putchar(ch);
+		}
+		else
+		{
+		}
+	}
+	putchar('\n');
+	return (0);
 }
